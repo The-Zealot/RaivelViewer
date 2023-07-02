@@ -2,7 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QFileSystemModel>
+#include <QFileDialog>
+#include <QScreen>
+
+#include "imagekeeper.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,9 +18,17 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void setImage(QString file);
+
+public slots:
+    void onChooseFolder();
+    void onOpenPage();
+
+    void onPageNext();
+    void onPagePrev();
 
 private:
     Ui::MainWindow *ui;
-    QFileSystemModel _model;
+    ImageKeeper* _keeper;
 };
 #endif // MAINWINDOW_H
