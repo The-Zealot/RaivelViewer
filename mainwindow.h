@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QFileDialog>
 #include <QScreen>
+#include <QScrollBar>
 
 #include "imagekeeper.h"
 

@@ -35,6 +35,8 @@ void MainWindow::setImage(QString file)
         int s_height = screenSize.height();
 
         int p_width = pixmap.width() > s_width ? s_width : pixmap.width();
+        int p_height = pixmap.height();
+
         this->setGeometry((s_width - p_width) / 2, 150, p_width, s_height * 0.7f);
     }
 
@@ -65,6 +67,9 @@ void MainWindow::onOpenPage()
 {
     QString image = _keeper->getImageName(ui->spinBoxPageNumber->value() - 1);
     setImage(image);
+
+    ui->scrollArea->verticalScrollBar()->setValue(0);
+    ui->scrollArea->horizontalScrollBar()->setValue(0);
 }
 
 void MainWindow::onPageNext()

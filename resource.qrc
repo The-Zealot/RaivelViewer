@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/image">
+        <file alias="noimage.png">image/notfound.png</file>
+    </qresource>
+</RCC>

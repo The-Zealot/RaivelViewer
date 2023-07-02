@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>446</width>
-    <height>335</height>
+    <width>609</width>
+    <height>465</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -99,9 +99,20 @@
          </spacer>
         </item>
         <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Исходная папка:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <widget class="QLineEdit" name="editFolderPath"/>
+           <widget class="QLineEdit" name="editFolderPath">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QToolButton" name="toolButtonChooseFolder">
@@ -126,8 +137,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>422</width>
-         <height>249</height>
+         <width>585</width>
+         <height>379</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
@@ -160,6 +171,12 @@
           <property name="text">
            <string/>
           </property>
+          <property name="pixmap">
+           <pixmap resource="resource.qrc">:/image/noimage.png</pixmap>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
          </widget>
         </item>
        </layout>
@@ -170,6 +187,8 @@
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
