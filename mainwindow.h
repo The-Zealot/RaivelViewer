@@ -8,6 +8,9 @@
 
 #include "imagekeeper.h"
 
+#define WINDOW_EXTEND       42
+#define WINDOW_DEFAULT_Y    150
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

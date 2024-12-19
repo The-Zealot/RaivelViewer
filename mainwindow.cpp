@@ -37,7 +37,7 @@ void MainWindow::setImage(QString file)
         int p_width = pixmap.width() > s_width ? s_width : pixmap.width();
         int p_height = pixmap.height();
 
-        this->setGeometry((s_width - p_width) / 2, 150, p_width, s_height * 0.7f);
+        this->setGeometry((s_width - p_width) / 2, WINDOW_DEFAULT_Y, p_width + WINDOW_EXTEND, s_height * 0.7f);
     }
 
     ui->statusBar->showMessage(file);
